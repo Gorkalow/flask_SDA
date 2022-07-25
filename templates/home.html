@@ -1,0 +1,15 @@
+<html>
+    <head>
+        {%if title%}
+        <title>{{title}} - Microblog</title>
+        {%else%}
+        <title>Welcome to Microblog</title>
+        {%endif%}
+    </head>
+    <body>
+        <h1>Hello, {{user|striptags|title}}!</h1>
+        {%for txt in texts %}
+            <h2> {{txt}} </h2>
+        {%endfor%}
+    </body>
+</html>
